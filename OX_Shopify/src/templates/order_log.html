@@ -1,0 +1,39 @@
+{% extends 'welcome.html' %}
+{% block title %}
+    Order Log
+{% endblock %}
+    {% block content %}
+    <div class="row justify-content-center" style="margin-top: 20px;">
+        <div class="col-auto">
+            <h2 class="text-center">Order Log</h2>
+            <p></p>
+            <br>
+            <table class="table table-hover table-dark table-responsive">
+                <thead>
+                    <tr>
+                        <!-- Your Columns HERE -->
+                        <th class="text-center" scope="col"><input type="checkbox"> Select All</th>
+                        <th class="text-center" scope="col">Order ID</th>
+                        <th class="text-center" scope="col">Order Date</th>
+                        <th class="text-center" scope="col">Order Status</th>
+                        <th class="text-center" scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Your rows inside the table HERE: -->
+                    <tr>
+                        <td class="text-center"><input type="checkbox"></td>
+                        <td class="text-center">#99999</td>
+                        <td class="text-center">11-2-2021</td>
+                        <td class="text-center">Accepted</td>
+                        <td>
+                            <button class="btn btn-outline btn-success">View</button>
+                            <button class="btn btn-outline btn-success">Re-Submit</button>
+                            <button class="btn btn-outline btn-success">Archive</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endblock %}

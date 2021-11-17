@@ -1,0 +1,42 @@
+{% extends 'welcome.html' %}
+{% block title %}
+    Products Linking
+{% endblock %}
+    {% block content %}
+    <div class="row justify-content-center" style="margin-top: 20px;">
+        <div class="col-auto">
+            <h2 class="text-center">Products Linking</h2>
+            <p></p>
+            <br>
+            <table class="table table-hover table-dark table-responsive">
+                <thead>
+                    <tr>
+                        <!-- Your Columns HERE -->
+                        <th class="text-center" scope="col"><input type="checkbox"> Select All</th>
+                        <th class="text-center" scope="col">Product Name</th>
+                        <th class="text-center" scope="col">SKU</th>
+                        <th class="text-center" scope="col">Something Else</th>
+                        <th class="text-center" scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Your rows inside the table HERE: -->
+                    {% for product in products %}
+                    <tr>
+                        <td class="text-center"><input type="checkbox"></td>
+                        <td class="text-center">{{ product }}</td>
+                        <td class="text-center">SKU</td>
+                        <td class="text-center">Something</td>
+                        <td>
+                            <button class="btn btn-outline btn-success">View</button>
+                            <button class="btn btn-outline btn-success">Re-Submit</button>
+                            <button class="btn btn-outline btn-success">Archive</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {% endblock %}
